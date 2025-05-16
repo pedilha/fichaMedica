@@ -25,7 +25,6 @@ public class VisualizacaoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_visualizacao);
 
-        // 1️⃣ Instancia helper e views
         db             = new FichaDbHelper(this);
         tvNome         = findViewById(R.id.tvNome);
         tvIdade        = findViewById(R.id.tvIdade);
@@ -38,7 +37,6 @@ public class VisualizacaoActivity extends AppCompatActivity {
         btnVoltarMain  = findViewById(R.id.btnVoltarMain);
         btnHistorico   = findViewById(R.id.btnHistorico);
 
-        // 2️⃣ Recupera o ID da ficha ou carrega a última
         int fichaId = getIntent().getIntExtra("fichaId", -1);
         Ficha ficha;
         if (fichaId != -1) {
@@ -47,17 +45,14 @@ public class VisualizacaoActivity extends AppCompatActivity {
             ficha = db.getLastFicha();
         }
 
-        // 3️⃣ Se não houver ficha, sai
         if (ficha == null) {
             Toast.makeText(this, "Nenhuma ficha encontrada.", Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
 
-        // 4️⃣ Preenche a tela
         preencherFicha(ficha);
 
-        // 5️⃣ Botão Editar
         btnEditar.setOnClickListener(v -> {
             Intent it = new Intent(this, MainActivity.class);
             it.putExtra("fichaId", ficha.getId());
@@ -65,13 +60,11 @@ public class VisualizacaoActivity extends AppCompatActivity {
             finish();
         });
 
-        // 6️⃣ Botão Voltar para Tela Principal
         btnVoltarMain.setOnClickListener(v -> {
             startActivity(new Intent(this, MainActivity.class));
             finish();
         });
 
-        // 7️⃣ Botão Histórico
         btnHistorico.setOnClickListener(v -> {
             startActivity(new Intent(this, HistoricoActivity.class));
             finish();
