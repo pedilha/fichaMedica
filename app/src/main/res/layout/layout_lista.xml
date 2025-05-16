@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/borda">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvId"
+        android:textSize="24dp"
+        android:hint="id"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvNome"
+        android:textSize="15dp"
+        android:hint="idade"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvIdade"
+        android:textSize="15dp"
+        android:hint="Idade"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAltura"
+        android:textSize="15dp"
+        android:hint="Altura"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvPeso"
+        android:textSize="15dp"
+        android:hint="PESO"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvImc"
+        android:textSize="15dp"
+        android:hint="IMC"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvPressao"
+        android:textSize="15dp"
+        android:hint="Pressão Arterial:"/>
+
+</LinearLayout>

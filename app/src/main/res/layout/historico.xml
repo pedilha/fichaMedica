@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ficha Médica"
+        android:layout_gravity="center"
+        android:textSize="25dp"
+        android:id="@+id/TituloHist"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="0dp"
+        android:background="@color/principal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ListView
+        android:id="@+id/Lista"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toTopOf="@id/llBtns"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TituloHist"
+        app:layout_constraintVertical_bias="0.414" />
+
+    <LinearLayout
+        android:id="@+id/llBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voltar"
+            android:textSize="20dp"
+            android:layout_gravity="center"
+            android:paddingHorizontal="45dp"
+            android:backgroundTint="@color/principal"
+/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
